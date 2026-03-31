@@ -12,15 +12,14 @@ import Personagens from "./pages/Personagens";
 function App() {
   return (
     <BrowserRouter>
-    
-      <div className="container-fluid fundo">
+      <Header />
+      <div className="container-fluid">
         <div className="row">
-          <Header />
-          <aside className="col-12 col-md-3 container mt-3 mt-md-4 order-1 order-md-2">
+          <aside className="col-12 col-md-3 mt-3 mt-md-4 order-1 order-md-2">
             <Menu />
           </aside>
 
-          <main className="col-12 col-md-9 container mt-4 order-2 order-md-1">
+          <main className="col-12 col-md-9 mt-2 mt-md-4 px-2 px-md-3 order-2 order-md-1">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Livros" element={<Livros />} />

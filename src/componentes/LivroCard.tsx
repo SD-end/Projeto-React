@@ -21,8 +21,8 @@ function LivroCard({ id, imagem, titulo, descricao }: LivroCardProps) {
           <div className="col-12 col-md-3">
             <img src={imagem} alt={titulo} className="img-fluid" />
           </div>
-          <div className="col-12 col-md-9 text-center">
-            <h5>{titulo}</h5>
+          <div className="col-12 col-md-9 text-center mt-2 mt-md-0">
+            <h4>{titulo}</h4>
             <p>{descricao}</p>
           </div>
         </div>
