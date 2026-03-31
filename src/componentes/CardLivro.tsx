@@ -13,7 +13,7 @@ function CardLivro({ livro }: CardLivroProps) {
           src={livro.imagem}
           alt={livro.titulo}
           className="card-img-top"
-          style={{ height: "400px", objectFit: "cover" }}
+          style={{ height: "500px", objectFit: "cover" }}
         />
 
         <div className="card-body d-flex flex-column">

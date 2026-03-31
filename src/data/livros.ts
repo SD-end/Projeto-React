@@ -7,7 +7,7 @@ export const livros: ILivro[] = [
     autor: "George R. R. Martin",
     ano: 1996,
     sinopse: "O primeiro livro da saga As Crônicas de Gelo e Fogo, onde famílias nobres disputam o controle do Trono de Ferro.",
-    imagem: "https://m.media-amazon.com/images/I/91dSMhdIzTL._SL1500_.jpg",
+    imagem: "https://m.media-amazon.com/images/I/816fHlL9LjL._SY466_.jpg",
     precoFisico: 59.90,
     precoKindle: 29.90,
     lido: false,
