@@ -1,18 +1,17 @@
 import Mapa from "../Imagens/Westeros.webp";
 
-
 function Home() {
   return (
-    <section className="text-center px-2"> 
-      <br />
+    <section className="text-start px-2"> 
       <div className="card mb-3">
-        <div className="card-body">
+        <div className="card-body text-center">
+          <h2>Mapa de Westeros</h2>
           <img src={Mapa} alt="Westeros" className="img-fluid rounded-4"/>
-          <a href="https://i.ibb.co/BT2yDhG/The-Known-World.jpg" target="blank" className="btn btn-primary">abrir mapa</a>
+          <a href="https://i.ibb.co/BT2yDhG/The-Known-World.jpg" target="blank" className="btn btn-primary mt-3">ABRIR MAPA</a>
         </div>
       </div>
       
-      <h2>O Inverno está Chegando: O Jogo pelo Trono de Ferro</h2>
+      <h3>O Inverno está Chegando: O Jogo pelo Trono de Ferro</h3>
       <p>
         Em um mundo onde as estações podem durar décadas e a linhagem de sangue dita o destino de nações, a luta 
         pelo poder é a única constante. Game of Thrones não é apenas uma história de reis e rainhas; é um mergulho 
@@ -33,7 +32,7 @@ function Home() {
         ncestral desperta nos confins do Norte, lembrando a todos que, no Jogo dos Tronos, ou você vence, ou você 
         morre. Não há meio-termo.
       </p>
-      <p>"Quando você joga o jogo dos tronos, você vence ou morre. Não existe meio-termo." — Cersei Lannister</p>
+      <p className="text-end">"Quando você joga o jogo dos tronos, você vence ou morre. Não existe meio-termo." — Cersei Lannister</p>
       <h3>As Crônicas de Gelo e Fogo: A Fundação do Épico</h3>
       <p>
         Antes de se tornar um fenômeno global na televisão, a saga nasceu da mente magistral de George R.R. Martin 
@@ -56,7 +55,7 @@ function Home() {
         como peças em um tabuleiro mortal. Os Stark lutam pela justiça em um mundo que a esqueceu; os Lannister protegem sua 
         hegemonia com ouro e sangue; e, além do Mar Estreito, a "Nascida da Tormenta" busca retomar seu direito de nascimento com fogo e fúria.
       </p>
-      <p>
+      <p className="text-end">
         "Um leitor vive mil vidas antes de morrer. O homem que nunca lê vive apenas uma." — Jojen Reed (A Dança dos Dragões)
       </p>
       <h3>Além do Trono de Ferro</h3>

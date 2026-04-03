@@ -11,8 +11,8 @@ function Menu() {
         Livros
       </NavLink>
 
-      <NavLink to="/Personagens" className="nav-link">
-        Personagens
+      <NavLink to="/Casas" className="nav-link">
+        Casas
       </NavLink>
     </nav>
   );

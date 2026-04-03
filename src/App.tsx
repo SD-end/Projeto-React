@@ -7,7 +7,7 @@ import Livro_1 from "./pages/Livro_1";
 
 import Home from "./pages/Home";
 import Livros from "./pages/Livros";
-import Personagens from "./pages/Personagens";
+import Casas from "./pages/Casas";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Livros" element={<Livros />} />
-              <Route path="/Personagens" element={<Personagens />} />
+              <Route path="/Casas" element={<Casas />} />
               <Route path="/livros/:id" element={<Livro_1 />} />
             </Routes>
           </main>

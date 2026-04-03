@@ -1,5 +1,5 @@
 import ListaLivros from "../componentes/ListaLivros";
-import { livros } from "../data/livros";
+import { livros } from "../Data/livros";
 
 function Livros() {
   return (

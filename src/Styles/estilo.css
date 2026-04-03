@@ -20,3 +20,11 @@ a {
     color: #ffffff;
     text-decoration: none;
 }
+
+.casa {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.casa:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(214, 13, 13, 0.2);
+}
