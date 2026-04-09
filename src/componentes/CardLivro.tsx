@@ -28,11 +28,11 @@ function CardLivro({ livro }: CardLivroProps) {
           </p>
 
           <p className="card-text mb-1">
-            <strong>Físico:</strong> R$ {livro.precoFisico}
+            <strong>Físico:</strong> R$ {livro.precoFisico}0
           </p>
 
           <p className="card-text mb-3">
-            <strong>Kindle:</strong> R$ {livro.precoKindle}
+            <strong>Kindle:</strong> R$ {livro.precoKindle}0
           </p>
 
           <Link to={`/livros/${livro.id}`} className="btn btn-dark mt-auto">

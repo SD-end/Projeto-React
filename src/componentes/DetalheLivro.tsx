@@ -23,9 +23,7 @@ function DetalheLivro({ livro }: DetalheLivroProps) {
 
             <p><strong>Autor:</strong> {livro.autor}</p>
             <p><strong>Ano:</strong> {livro.ano}</p>
-            <p><strong>Sinopse:</strong> {livro.sinopse}</p>
-            <p><strong>Preço Físico:</strong> R$ {livro.precoFisico}</p>
-            <p><strong>Preço Kindle:</strong> R$ {livro.precoKindle}</p>
+            <p><strong>Descrição:</strong> {livro.sinopse}</p>
           </div>
         </div>
       </div>
