@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import DetalheLivro from "../componentes/DetalheLivro";
-import { livros } from "../Data/livros";
+import { livros } from "../data/livros";
 
 function Livro_1() {
   const { id } = useParams();

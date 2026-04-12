@@ -10,4 +10,5 @@ export interface ILivro {
   lido: boolean;
   noCarrinho: boolean;
   comprado: boolean;
+  formato: "fisico" | "kindle";
 }

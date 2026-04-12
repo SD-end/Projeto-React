@@ -1,20 +1,21 @@
 import { NavLink } from "react-router-dom";
+import Dashboard from "./Dashboard";
 
 function Menu() {
   return (
-    <nav className="nav nav-pills justify-content-center flex-md-column bg-light p-2 mt-md-5 border rounded m-2">
-      <NavLink to="/" className="nav-link">
-        Home
-      </NavLink>
+    <>
+      <Dashboard />
 
-      <NavLink to="/Livros" className="nav-link">
-        Livros
-      </NavLink>
+      <nav className="nav nav-pills flex-column p-3 bg-medieval">
+        <h5 className="text-center mb-3" style={{ color: '#c5a059' }}>
+          📜 Menu
+        </h5>
 
-      <NavLink to="/Casas" className="nav-link">
-        Casas
-      </NavLink>
-    </nav>
+        <NavLink to="/" className="nav-link mb-2">🏠 Home</NavLink>
+        <NavLink to="/livros" className="nav-link mb-2">📚 Livros</NavLink>
+        <NavLink to="/casas" className="nav-link">🏰 Casas</NavLink> {/* 👈 corrigido */}
+      </nav>
+    </>
   );
 }
 
