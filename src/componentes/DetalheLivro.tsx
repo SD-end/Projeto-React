@@ -1,3 +1,4 @@
+import { useLivros } from "../context/useLivros";
 import type { ILivro } from "../interfaces/ILivro";
 
 interface DetalheLivroProps {
@@ -5,6 +6,9 @@ interface DetalheLivroProps {
 }
 
 function DetalheLivro({ livro }: DetalheLivroProps) {
+
+  const { adicionarCarrinho, marcarLido } = useLivros();
+
   return (
     <section className="container my-4">
       <div className="card shadow-lg p-4">
@@ -24,6 +28,32 @@ function DetalheLivro({ livro }: DetalheLivroProps) {
             <p><strong>Autor:</strong> {livro.autor}</p>
             <p><strong>Ano:</strong> {livro.ano}</p>
             <p><strong>Descrição:</strong> {livro.sinopse}</p>
+            
+            
+            <div className="mt-4 d-flex gap-3">
+              
+              
+              <button
+                className="btn btn-warning px-4 py-2"
+                disabled={livro.noCarrinho || livro.comprado}
+                onClick={() => adicionarCarrinho(livro.id)}
+              >
+                {livro.noCarrinho
+                  ? "🛒 No carrinho"
+                  : livro.comprado
+                  ? "✔️ Já comprado"
+                  : "🛒 Adicionar ao carrinho"}
+              </button>
+
+              
+              <button
+                className="btn btn-secondary px-4 py-2"
+                disabled={livro.lido}
+                onClick={() => marcarLido(livro.id)}
+              >
+                {livro.lido ? "📖 Já lido" : "📖 Marcar como lido"}
+              </button>
+            </div>
           </div>
         </div>
       </div>

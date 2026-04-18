@@ -14,7 +14,6 @@ function Livros() {
       </div>
 
       <div className="row">
-        {/* Passamos a lista do estado global para o componente de listagem */}
         <ListaLivros livros={livros} />
       </div>
     </section>

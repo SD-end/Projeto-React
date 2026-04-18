@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
-import { useLivros } from "../context/useLivros";
 import type { ILivro } from "../interfaces/ILivro";
+import { useLivros } from "../context/useLivros";
+
 
 interface CardLivroProps {
   livro: ILivro;
 }
 
 function CardLivro({ livro }: CardLivroProps) {
-  const { adicionarCarrinho, comprarLivro, marcarLido } = useLivros();
+  const { adicionarCarrinho, marcarLido } = useLivros();
 
   return (
     <div className="col-12 col-sm-6 col-lg-4 mb-4">
-      <article className="card h-100 shadow-sm">
+      <article
+        className={`card h-100 shadow-sm ${
+          livro.comprado ? "border-success" : ""
+        }`}
+      >
         <img
           src={livro.imagem}
           alt={livro.titulo}
@@ -31,62 +36,46 @@ function CardLivro({ livro }: CardLivroProps) {
           </p>
 
           <p className="card-text mb-1">
-            <strong>Físico:</strong> R$ {livro.precoFisico.toFixed(2)}
+            <strong>Físico:</strong> R$ {livro.precoFisico}
           </p>
 
           <p className="card-text mb-3">
-            <strong>Kindle:</strong> R$ {livro.precoKindle.toFixed(2)}
+            <strong>Kindle:</strong> R$ {livro.precoKindle}
           </p>
 
-          {/* Status do Livro */}
-          <div className="mb-2">
-            {livro.noCarrinho && (
-              <span className="badge bg-warning text-dark me-1">
-                🛒 No Carrinho
-              </span>
-            )}
-            {livro.comprado && (
-              <span className="badge bg-success me-1">
-                💰 Comprado
-              </span>
-            )}
-            {livro.lido && (
-              <span className="badge bg-primary">
-                📖 Lido
-              </span>
-            )}
-          </div>
-
-          {/* Botões de Ação */}
-          <div className="d-flex flex-wrap gap-2 mb-2">
+          
+          <div className="mt-auto d-flex flex-column gap-2">
+            
+            
             <button
-              className="btn btn-warning btn-sm"
+              className="btn btn-warning"
+              disabled={livro.noCarrinho || livro.comprado}
               onClick={() => adicionarCarrinho(livro.id)}
-              disabled={livro.comprado}
             >
-              🛒 Carrinho
+              {livro.noCarrinho
+                ? "🛒 No carrinho"
+                : livro.comprado
+                ? "✔️ Já comprado"
+                : "🛒 Adicionar ao carrinho"}
             </button>
 
+            
             <button
-              className="btn btn-success btn-sm"
-              onClick={() => comprarLivro(livro.id)}
-              disabled={livro.comprado}
-            >
-              💰 Comprar
-            </button>
-
-            <button
-              className="btn btn-primary btn-sm"
-              onClick={() => marcarLido(livro.id)}
+              className="btn btn-secondary"
               disabled={livro.lido}
+              onClick={() => marcarLido(livro.id)}
             >
-              📖 Lido
+              {livro.lido ? "📖 Já lido" : "📖 Marcar como lido"}
             </button>
-          </div>
 
-          <Link to={`/livros/${livro.id}`} className="btn btn-dark mt-auto">
-            Ver detalhes
-          </Link>
+            
+            <Link
+              to={`/livros/${livro.id}`}
+              className="btn btn-dark"
+            >
+              Ver detalhes
+            </Link>
+          </div>
         </div>
       </article>
     </div>

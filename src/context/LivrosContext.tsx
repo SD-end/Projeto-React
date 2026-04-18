@@ -4,6 +4,7 @@ import type { ILivro } from "../interfaces/ILivro";
 export interface LivrosContextType {
   livros: ILivro[];
   adicionarCarrinho: (id: number) => void;
+  removerCarrinho: (id: number) => void;
   marcarLido: (id: number) => void;
   comprarLivro: (id: number) => void;
 

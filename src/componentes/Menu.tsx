@@ -13,7 +13,12 @@ function Menu() {
 
         <NavLink to="/" className="nav-link mb-2">🏠 Home</NavLink>
         <NavLink to="/livros" className="nav-link mb-2">📚 Livros</NavLink>
-        <NavLink to="/casas" className="nav-link">🏰 Casas</NavLink> {/* 👈 corrigido */}
+        <NavLink to="/casas" className="nav-link mb-2">🏰 Casas</NavLink>
+
+        <NavLink to="/carrinho" className="nav-link mb-2">
+          🛒 Carrinho
+        </NavLink>
+
       </nav>
     </>
   );
