@@ -48,7 +48,7 @@ export const LivrosProvider = ({ children }: { children: ReactNode }) => {
       value={{
         livros,
         adicionarCarrinho,
-        removerCarrinho, // 👈 Disponibiliza a nova função
+        removerCarrinho,
         marcarLido,
         comprarLivro,
         totalLivros,
